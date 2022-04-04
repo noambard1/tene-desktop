@@ -23,7 +23,7 @@ import Icon from "@mui/material/Icon";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-function RotatingCardFront({ color, image, icon, title, description }) {
+function RotatingCardFront({ color, image, title }) {
   return (
     <MKBox
       display="flex"
@@ -40,21 +40,13 @@ function RotatingCardFront({ color, image, icon, title, description }) {
             rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85),
             rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85)
           )}, url(${image})`,
-        backgroundSize: "cover",
+        backgroundSize: "inherit",
         backfaceVisibility: "hidden",
       }}
     >
       <MKBox py={12} px={3} textAlign="center" lineHeight={1}>
-        {icon && (
-          <MKTypography variant="h2" color="white" my={2}>
-            {typeof icon === "string" ? <Icon>{icon}</Icon> : icon}
-          </MKTypography>
-        )}
-        <MKTypography variant="h3" color="white" gutterBottom>
+        <MKTypography variant="h1" color="white" gutterBottom>
           {title}
-        </MKTypography>
-        <MKTypography variant="body2" color="white" opacity={0.8}>
-          {description}
         </MKTypography>
       </MKBox>
     </MKBox>

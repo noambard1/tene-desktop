@@ -53,7 +53,7 @@ import PageHeaders from "layouts/sections/page-sections/page-headers";
 import Features from "layouts/sections/page-sections/featuers";
 import Navbars from "layouts/sections/navigation/navbars";
 import NavTabs from "layouts/sections/navigation/nav-tabs";
-import Pagination from "layouts/sections/navigation/pagination";
+// import Pagination from "layouts/sections/navigation/pagination";
 import Inputs from "layouts/sections/input-areas/inputs";
 import Forms from "layouts/sections/input-areas/forms";
 import Alerts from "layouts/sections/attention-catchers/alerts";
@@ -143,11 +143,11 @@ const routes = [
             route: "/sections/navigation/nav-tabs",
             component: <NavTabs />,
           },
-          {
-            name: "pagination",
-            route: "/sections/navigation/pagination",
-            component: <Pagination />,
-          },
+          // {
+          //   name: "pagination",
+          //   route: "/sections/navigation/pagination",
+          //   component: <Pagination />,
+          // },
         ],
       },
       {
