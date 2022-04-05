@@ -18,10 +18,8 @@ import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 
-// Images
-import bgBack from "assets/images/rotating-card-bg-back.jpeg";
 
-function Information({backgroundImage, title}) {
+function Information({ backgroundImage, title ,description,link}) {
   return (
             <RotatingCard>
               <RotatingCardFront
@@ -31,16 +29,13 @@ function Information({backgroundImage, title}) {
                   {title}
                   </>
                 }
-                // description="All the MUI components that you need in a development have been re-design with the new look."
               />
               <RotatingCardBack
-                image={bgBack}
-                title="Discover More"
-                description="You will save a lot of time going from prototyping to full-functional code because all elements are implemented."
+                description={description}
                 action={{
                   type: "internal",
-                  route: "/sections/page-sections/page-headers",
-                  label: "start with header",
+                  route: {link},
+                  label: 'לאתר',
                 }}
               />
             </RotatingCard>

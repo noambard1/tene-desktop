@@ -27,7 +27,7 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKButton from "components/MKButton";
 
-function RotatingCard({ color, image, title, description, action }) {
+function RotatingCard({ color, description, action }) {
   return (
     <MKBox
       display="flex"
@@ -46,16 +46,13 @@ function RotatingCard({ color, image, title, description, action }) {
           `${linearGradient(
             rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85),
             rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85)
-          )}, url(${image})`,
+          )}`,
         backgroundSize: "cover",
         backfaceVisibility: "hidden",
         transform: "rotateY(180deg)",
       }}
     >
-      <MKBox pt={12} pb={2} px={2} textAlign="center" lineHeight={1}>
-        <MKTypography variant="h3" color="white" gutterBottom>
-          {title}
-        </MKTypography>
+      <MKBox pt={12} pb={2} px={2} textAlign="center" lineHeight={5}>
         <MKTypography variant="body2" color="white" opacity={0.8}>
           {description}
         </MKTypography>
@@ -87,7 +84,7 @@ function RotatingCard({ color, image, title, description, action }) {
 
 // Setting default props for the RotatingCard
 RotatingCard.defaultProps = {
-  color: "info",
+  color: "dark",
 };
 
 // Typechecking props for the RotatingCard

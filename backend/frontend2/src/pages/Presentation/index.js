@@ -35,9 +35,9 @@ import footerRoutes from "footer.routes";
 import backgroundSite from "assets/images/backgroundSite.png";
 import teneDesktopText from "assets/images/tenedesktoptext.png";
 import tafkidipediaLogo from "assets/images/tafkidipediashortlogo.png";
+import tene9Logo from "assets/images/tene9Logo.png"
 import logotene1 from "assets/images/logo-tene1.png";
 import logotene2 from "assets/images/logo-tene2.png";
-import { padding } from "@mui/system";
 
 function Presentation() {
   return (
@@ -54,11 +54,11 @@ function Presentation() {
           placeItems: "center",
         }}
       >
-        <img src={logotene1} style={{ height:"10%", width: "auto", position:"absolute", top:"70px", right:"50px"}} xs={12} lg={4}></img>
-        <img src={logotene2} style={{ height:"18%", width: "auto", position:"absolute", top:"0px", left:"50px"}} xs={12} lg={4}></img>
+        <img src={logotene1} style={{ height:"10%", width: "auto", position:"absolute", top:"3rem", right:"2rem"}} xs={12} lg={4}></img>
+        <img src={logotene2} style={{ height:"18%", width: "auto", position:"absolute", top:"0px", left:"2rem"}} xs={12} lg={4}></img>
           <Row style = {{display:"flex"}} >
             <Col xs={12} lg={4} style={{textAlign:"center", paddingRight:"4rem"}}>
-            <img src={teneDesktopText} xs={12} lg={4} style={{height:"250px"}}></img>
+            <img src={teneDesktopText} xs={12} lg={4} style={{height:"10rem"}}></img>
             </Col>
             </Row>
       </MKBox>
@@ -76,19 +76,19 @@ function Presentation() {
         <div style={{width: "95%"}}>
         <Row style={{display: "flex", marginBottom:"1rem" }}>
             <Col xs={12} lg={3}>
-            <Information  backgroundImage={tafkidipediaLogo} title= {'מערכת דש"ב'} />
+            <Information  backgroundImage={tafkidipediaLogo} title= {'מערכת דש"ב'} description={'עכשיו אני כותב הרבה דברים לראות אם זה באמת עובד או לא כי יש לי הרבה על מה לכתוב'} link={''} />
             </Col>
             <Col xs={12} lg={3} >
-            <Information backgroundImage={tafkidipediaLogo} title= {'מערכת כש"ם'}/>
+            <Information backgroundImage={tene9Logo} title= {'טנ"ה 9'} description={'עכשיו אני כותב הרבה דברים לראות אם זה באמת עובד או לא כי יש לי הרבה על מה לכתוב'} link={''}/>
             </Col>
             <Col xs={12} lg={3}>
-            <Information />
+            <Information backgroundImage={logotene2} title= {'מערכת כש"מ'} description={'עכשיו אני כותב הרבה דברים לראות אם זה באמת עובד או לא כי יש לי הרבה על מה לכתוב'} link={''}/>
             </Col>
             <Col xs={12} lg={3}>
-            <Information />
+            <Information backgroundImage={logotene2} title= {'אתר החיל'} description={'עכשיו אני כותב הרבה דברים לראות אם זה באמת עובד או לא כי יש לי הרבה על מה לכתוב'} link={''}/>
             </Col>
         </Row>
-        <Row style={{display: "flex"}}>
+        {/* <Row style={{display: "flex"}}>
             <Col xs={12} lg={3}>
             <Information  />
             </Col>
@@ -101,7 +101,7 @@ function Presentation() {
             <Col xs={12} lg={3}>
             <Information />
             </Col>
-        </Row>
+        </Row> */}
         </div>
       </Card>
       

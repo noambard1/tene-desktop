@@ -40,7 +40,9 @@ function RotatingCardFront({ color, image, title }) {
             rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85),
             rgba(gradients[color] ? gradients[color].main : gradients.info.main, 0.85)
           )}, url(${image})`,
-        backgroundSize: "inherit",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition:"center",
         backfaceVisibility: "hidden",
       }}
     >
@@ -55,7 +57,7 @@ function RotatingCardFront({ color, image, title }) {
 
 // Setting default props for the RotatingCardFront
 RotatingCardFront.defaultProps = {
-  color: "info",
+  color: "dark",
   icon: "",
 };
 
